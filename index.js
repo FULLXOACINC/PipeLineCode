@@ -8,7 +8,7 @@ function PipelineObj(rez, num,index,bitnum) {
     this.bitnum=bitnum;
 }
 var p=8;
-var maxElInPipeline=3;
+var maxElInPipeline=5;
 var ElInPipeline=0;
 var ArrayOfPipelineElement= new Array();
 
@@ -28,7 +28,7 @@ function createPipeline() {
                 ArrayOfPipelineElement[index].work=false;
                 return;
             }
-            console.log(index);
+
             if(ElInPipeline>=maxElInPipeline){
                 console.log("too march el in pipeline "+ElInPipeline);
                 setTimeout(ArrayOfPipelineElement[index+1].SumAndMove(index+1), 1);
@@ -37,6 +37,7 @@ function createPipeline() {
             }
 
             var workObj=ArrayOfPipelineElement[index].stack.shift();
+            // console.log(workObj.bitnum+".."+workObj.num);
             ElInPipeline++;
 
             var DoSum=(workObj.bitnum).toString(2).charAt(workObj.index);
@@ -60,6 +61,7 @@ function createPipeline() {
         el={
             SumAndMove: function (index) {
                 if(!ArrayOfPipelineElement[index-1].work && ArrayOfPipelineElement[index].stack.length==0){
+                    setTimeout(ArrayOfPipelineElement[index+1].SumAndMove(index+1), 1);
                     ArrayOfPipelineElement[index].work=false;
                     return;
                 }
@@ -71,7 +73,7 @@ function createPipeline() {
                 }
 
                 var workObj=ArrayOfPipelineElement[index].stack.shift();
-
+                // console.log(workObj.bitnum+".."+workObj.num+".."+index);
                 var DoSum=(workObj.bitnum).toString(2).charAt(workObj.index);
                 if(DoSum==1){
                     workObj.rez+=workObj.num;
@@ -91,19 +93,19 @@ function createPipeline() {
     }
     el={
         SumAndMove: function (index) {
-            console.log(index+"   "+(ArrayOfPipelineElement.length-1));
-            if(!ArrayOfPipelineElement[index-1].work&&ArrayOfPipelineElement[index].stack.length==0){
+            if(ArrayOfPipelineElement[index].stack.length==0){
                 ArrayOfPipelineElement[index].work=false;
                 return;
             }
 
             if(ArrayOfPipelineElement[index-1].work&& ArrayOfPipelineElement[index].stack.length==0){
                 setTimeout(ArrayOfPipelineElement[index].SumAndMove, 1);
+
                 return;
             }
 
             var workObj=ArrayOfPipelineElement[index].stack.shift();
-
+            // console.log(workObj.bitnum+".."+workObj.num+".."+index);
             var DoSum=(workObj.bitnum).toString(2).charAt(workObj.index);
             if(DoSum==1){
                 workObj.rez+=workObj.num;
@@ -112,13 +114,14 @@ function createPipeline() {
                 workObj.rez<<=1;
 
             ElInPipeline--;
+            console.log(workObj.rez);
             if(ElInPipeline+1>=maxElInPipeline){
                 // console.log("too march el in pipeline "+ElInPipeline);
                 setTimeout(ArrayOfPipelineElement[0].SumAndMove(0), 1);
                 // setTimeout(ArrayOfPipelineElement[index].SumAndMove(index), 1);
 
             }
-            console.log("rez:"+workObj.num+" * "+workObj.bitnum+"= "+workObj.rez);
+
             setTimeout(ArrayOfPipelineElement[index].SumAndMove(index), 1);
 
         },
@@ -130,22 +133,32 @@ function createPipeline() {
 }
 createPipeline();
 addToPipeline(1,2);
-addToPipeline(3,9);
-addToPipeline(3,10);
-addToPipeline(1,2);
-addToPipeline(3,9);
-addToPipeline(3,10);
-addToPipeline(1,2);
-addToPipeline(3,9);
-addToPipeline(3,10);
+addToPipeline(1,3);
+addToPipeline(1,4);
+addToPipeline(1,5);
+addToPipeline(1,6);
+addToPipeline(1,7);
+addToPipeline(1,8);
+addToPipeline(1,9);
+addToPipeline(1,10);
+addToPipeline(1,11);
+addToPipeline(1,12);
+addToPipeline(1,13);
+addToPipeline(1,14);
+addToPipeline(1,15);
+addToPipeline(1,16);
+addToPipeline(1,17);
+addToPipeline(1,18);
+addToPipeline(1,19);
+
 
 
 
 
 startPipeline();
 
-
-
+setInterval('alert(1)',1);
+alert(2);
 
 
 
