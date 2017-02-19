@@ -36,6 +36,7 @@ function createPipeline() {
                 return;
             }
 
+
             var workObj=ArrayOfPipelineElement[index].stack.shift();
             // console.log(workObj.bitnum+".."+workObj.num);
             ElInPipeline++;
@@ -54,7 +55,8 @@ function createPipeline() {
         },
         stack:new Array(),
         work:true,
-        index:0
+        timeNow:0,
+        time:1
     }
     ArrayOfPipelineElement.push(el);
     for(var i=1;i<p-1;i++){
@@ -87,7 +89,8 @@ function createPipeline() {
             },
             stack:new Array(),
             work:true,
-            index:i
+            timeNow:0,
+            time:i
         }
         ArrayOfPipelineElement.push(el);
     }
@@ -127,7 +130,8 @@ function createPipeline() {
         },
         stack:new Array(),
         work:true,
-        index:p-1
+        timeNow:0,
+        time:p-1
     }
     ArrayOfPipelineElement.push(el);
 }
@@ -157,8 +161,6 @@ addToPipeline(1,19);
 
 startPipeline();
 
-setInterval('alert(1)',1);
-alert(2);
 
 
 
