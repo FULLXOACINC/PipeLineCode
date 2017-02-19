@@ -25,7 +25,7 @@ function createPipeline() {
     var el={
         SumAndMove: function (index) {
             if(ArrayOfPipelineElement[index].stack.length==0){
-                ArrayOfPipelineElement[index].work=false;
+                // ArrayOfPipelineElement[index].work=false;
                 return;
             }
 
@@ -36,7 +36,14 @@ function createPipeline() {
                 return;
             }
 
+            ArrayOfPipelineElement[index].timeNow++;
+            if(ArrayOfPipelineElement[index].timeNow<ArrayOfPipelineElement[index].time){
+                ArrayOfPipelineElement[index].SumAndMove(index);
+                return;
+            }
 
+
+            ArrayOfPipelineElement[index].timeNow=0;
             var workObj=ArrayOfPipelineElement[index].stack.shift();
             // console.log(workObj.bitnum+".."+workObj.num);
             ElInPipeline++;
@@ -56,7 +63,7 @@ function createPipeline() {
         stack:new Array(),
         work:true,
         timeNow:0,
-        time:1
+        time:7
     }
     ArrayOfPipelineElement.push(el);
     for(var i=1;i<p-1;i++){
@@ -64,7 +71,7 @@ function createPipeline() {
             SumAndMove: function (index) {
                 if(!ArrayOfPipelineElement[index-1].work && ArrayOfPipelineElement[index].stack.length==0){
                     setTimeout(ArrayOfPipelineElement[index+1].SumAndMove(index+1), 1);
-                    ArrayOfPipelineElement[index].work=false;
+                    // ArrayOfPipelineElement[index].work=false;
                     return;
                 }
                 // console.log("index "+index+" run");
@@ -73,7 +80,13 @@ function createPipeline() {
                     setTimeout(ArrayOfPipelineElement[index+1].SumAndMove(index+1), 1);
                     return;
                 }
+                ArrayOfPipelineElement[index].timeNow++;
+                if(ArrayOfPipelineElement[index].timeNow<ArrayOfPipelineElement[index].time){
+                    ArrayOfPipelineElement[index].SumAndMove(index);
+                    return;
+                }
 
+                ArrayOfPipelineElement[index].timeNow=0;
                 var workObj=ArrayOfPipelineElement[index].stack.shift();
                 // console.log(workObj.bitnum+".."+workObj.num+".."+index);
                 var DoSum=(workObj.bitnum).toString(2).charAt(workObj.index);
@@ -90,14 +103,14 @@ function createPipeline() {
             stack:new Array(),
             work:true,
             timeNow:0,
-            time:i
+            time:2
         }
         ArrayOfPipelineElement.push(el);
     }
     el={
         SumAndMove: function (index) {
             if(ArrayOfPipelineElement[index].stack.length==0){
-                ArrayOfPipelineElement[index].work=false;
+                // ArrayOfPipelineElement[index].work=false;
                 return;
             }
 
@@ -106,8 +119,17 @@ function createPipeline() {
 
                 return;
             }
+            // console.log(ArrayOfPipelineElement[index].stack[0].bitnum);
 
+            ArrayOfPipelineElement[index].timeNow++;
+            if(ArrayOfPipelineElement[index].timeNow<ArrayOfPipelineElement[index].time){
+                ArrayOfPipelineElement[index].SumAndMove(index);
+                return;
+            }
+
+            ArrayOfPipelineElement[index].timeNow=0;
             var workObj=ArrayOfPipelineElement[index].stack.shift();
+
             // console.log(workObj.bitnum+".."+workObj.num+".."+index);
             var DoSum=(workObj.bitnum).toString(2).charAt(workObj.index);
             if(DoSum==1){
@@ -118,7 +140,7 @@ function createPipeline() {
 
             ElInPipeline--;
             console.log(workObj.rez);
-            if(ElInPipeline+1>=maxElInPipeline){
+            if(ElInPipeline+1>=maxElInPipeline&&ArrayOfPipelineElement[0].stack.length!=0){
                 // console.log("too march el in pipeline "+ElInPipeline);
                 setTimeout(ArrayOfPipelineElement[0].SumAndMove(0), 1);
                 // setTimeout(ArrayOfPipelineElement[index].SumAndMove(index), 1);
@@ -131,7 +153,7 @@ function createPipeline() {
         stack:new Array(),
         work:true,
         timeNow:0,
-        time:p-1
+        time:7
     }
     ArrayOfPipelineElement.push(el);
 }
