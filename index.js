@@ -7,11 +7,12 @@ function PipelineObj(rez, num,index,bitnum) {
     this.index=index;
     this.bitnum=bitnum;
 }
-var p=8;
-var maxElInPipeline=5;
+var p;
+var maxElInPipeline;
 var ElInPipeline=0;
 var ArrayOfPipelineElement= new Array();
 var ArrayRezOfWork= new Array();
+
 
 function startPipeline() {
     for(var index=0; index<ArrayOfPipelineElement.length-1; index++)
@@ -26,12 +27,12 @@ function createPipeline() {
     var el={
         SumAndMove: function (index) {
             if(ArrayOfPipelineElement[index].stack.length==0){
-                // ArrayOfPipelineElement[index].work=false;
+                ArrayOfPipelineElement[index].work=false;
                 return;
             }
 
             if(ElInPipeline>=maxElInPipeline){
-                console.log("too march el in pipeline "+ElInPipeline);
+                console.log("too march el at pipeline "+ElInPipeline);
                 setTimeout(ArrayOfPipelineElement[index+1].SumAndMove(index+1), 1);
                 // setTimeout(ArrayOfPipelineElement[index].SumAndMove(index), 1);
                 return;
@@ -57,7 +58,7 @@ function createPipeline() {
             if(workObj.index<(workObj.bitnum).toString(2).length-1)
                 workObj.rez<<=1;
             ArrayOfPipelineElement[index+1].stack.push(new PipelineObj(workObj.rez,workObj.num,++workObj.index,workObj.bitnum));
-            ArrayRezOfWork[index]=workObj.rez;
+            // ArrayRezOfWork[index].push(workObj.bitnum);
 
             setTimeout(ArrayOfPipelineElement[index].SumAndMove(index), 1);
         },
@@ -72,7 +73,7 @@ function createPipeline() {
             SumAndMove: function (index) {
                 if(!ArrayOfPipelineElement[index-1].work && ArrayOfPipelineElement[index].stack.length==0){
                     setTimeout(ArrayOfPipelineElement[index+1].SumAndMove(index+1), 1);
-                    // ArrayOfPipelineElement[index].work=false;
+                    ArrayOfPipelineElement[index].work=false;
                     return;
                 }
                 // console.log("index "+index+" run");
@@ -96,6 +97,7 @@ function createPipeline() {
                 }
                 if(workObj.index<(workObj.bitnum).toString(2).length-1)
                     workObj.rez<<=1;
+                // ArrayRezOfWork[index].push(workObj.bitnum);
                 ArrayOfPipelineElement[index+1].stack.push(new PipelineObj(workObj.rez,workObj.num,++workObj.index,workObj.bitnum));
 
                 setTimeout(ArrayOfPipelineElement[index].SumAndMove(index), 1);
@@ -111,7 +113,7 @@ function createPipeline() {
     el={
         SumAndMove: function (index) {
             if(ArrayOfPipelineElement[index].stack.length==0){
-                // ArrayOfPipelineElement[index].work=false;
+                ArrayOfPipelineElement[index].work=false;
                 return;
             }
 
@@ -141,7 +143,7 @@ function createPipeline() {
 
             ElInPipeline--;
             console.log(workObj.rez);
-            ArrayRezOfWork[index]=workObj.rez;
+            // ArrayRezOfWork[index].push(workObj.bitnum);
 
             if(ElInPipeline+1>=maxElInPipeline&&ArrayOfPipelineElement[0].stack.length!=0){
                 // console.log("too march el in pipeline "+ElInPipeline);
@@ -161,31 +163,31 @@ function createPipeline() {
     ArrayOfPipelineElement.push(el);
 }
 
-    createPipeline();
-    addToPipeline(1,2);
-    addToPipeline(1,3);
-    addToPipeline(1,4);
-    addToPipeline(1,5);
-    addToPipeline(1,6);
-    addToPipeline(1,7);
-    addToPipeline(1,8);
-    addToPipeline(1,9);
-    addToPipeline(1,10);
-    addToPipeline(1,11);
-    addToPipeline(1,12);
-    addToPipeline(1,13);
-    addToPipeline(1,14);
-    addToPipeline(1,15);
-    addToPipeline(1,16);
-    addToPipeline(1,17);
-    addToPipeline(1,18);
-    addToPipeline(1,19);
+    // createPipeline();
+    // addToPipeline(1,2);
+    // addToPipeline(1,3);
+    // addToPipeline(1,4);
+    // addToPipeline(1,5);
+    // addToPipeline(1,6);
+    // addToPipeline(1,7);
+    // addToPipeline(1,8);
+    // addToPipeline(1,9);
+    // addToPipeline(1,10);
+    // addToPipeline(1,11);
+    // addToPipeline(1,12);
+    // addToPipeline(1,13);
+    // addToPipeline(1,14);
+    // addToPipeline(1,15);
+    // addToPipeline(1,16);
+    // addToPipeline(1,17);
+    // addToPipeline(1,18);
+    // addToPipeline(1,19);
 
 
 
 
 
-    startPipeline();
+    // startPipeline();
 
 
 
