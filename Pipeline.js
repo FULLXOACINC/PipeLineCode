@@ -33,13 +33,7 @@ function createPipeline() {
                 return;
             }
 
-            // if(ElAtPipeline>=maxElInPipeline){
-            //     console.log("too much el at pipeline "+ElAtPipeline);
-            //     for(var i=0;i<ArrayOfPipelineElement[index].stack.length;i++)
-            //         ArrayOfPipelineElement[index].stack[i].time+=searchMaxTimeEl();
-            //     setTimeout(ArrayOfPipelineElement[index+1].SumAndMove(index+1), 1);
-            //     return;
-            // }
+
 
             for(var i=0;i<ArrayOfPipelineElement[index].stack.length;i++)
                 ArrayOfPipelineElement[index].stack[i].time++;
@@ -49,7 +43,8 @@ function createPipeline() {
                 rez:ArrayOfPipelineElement[index].stack[0].rez,
                 time:ArrayOfPipelineElement[index].stack[0].time,
                 item:ArrayOfPipelineElement[index].stack[0].item,
-                num:ArrayOfPipelineElement[index].stack[0].num
+                num:ArrayOfPipelineElement[index].stack[0].num,
+                toPipeline:new Array().concat(ArrayOfPipelineElement[index].stack)
 
             });
             if(ArrayOfPipelineElement[index].timeNow<ArrayOfPipelineElement[index].time){
@@ -60,7 +55,6 @@ function createPipeline() {
 
             ArrayOfPipelineElement[index].timeNow=0;
             var workObj=ArrayOfPipelineElement[index].stack.shift();
-            // ElAtPipeline++;
 
             var DoSum=(workObj.bitnum).toString(2).charAt(workObj.index);
 
@@ -172,13 +166,9 @@ function createPipeline() {
             if(workObj.index<(workObj.bitnum).toString(2).length-1)
                 workObj.rez<<=1;
 
-            // ElAtPipeline--;
             ArrayRezOfWork.push({rez:workObj.rez,time:workObj.time});
 
-            // if(ElAtPipeline+1>=maxElInPipeline&&ArrayOfPipelineElement[0].stack.length!=0){
-            //     setTimeout(ArrayOfPipelineElement[0].SumAndMove(0), 1);
-            //
-            // }
+
 
             setTimeout(ArrayOfPipelineElement[index].SumAndMove(index), 1);
 
@@ -191,26 +181,7 @@ function createPipeline() {
     }
     ArrayOfPipelineElement.push(el);
 }
-// function searchMaxTimeEl() {
-//     var maxTime=0;
-//     var index=0;
-//     for(var i=0;i<ArrayOfPipelineElement.length;i++)
-//         if(ArrayOfPipelineElement[i].stack.length!=0)
-//             if(ArrayOfPipelineElement[i].stack[0].time>=maxTime){
-//                 maxTime=ArrayOfPipelineElement[i].stack[0].time;
-//                 index=i;
-//             }
-//     maxTime=0;
-//
-//     for(var i=index+maxElInPipeline-1;i<ArrayOfPipelineElement.length;i++){
-//         maxTime+=ArrayOfPipelineElement[i].time;
-//     }
-//     var k =index+maxElInPipeline-1;
-//     console.log(k);
-//     return maxTime;
-//
-//
-// }
+
 
 
 

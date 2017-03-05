@@ -33,26 +33,29 @@ $(document).ready(function(){
 
 
         startPipeline();
-
+        $('#here_table').empty();
         var content = "<table >"
         content += '<tr>';
 
         content += '<td></td>';
-        content += '<td>На конвеер </td>';
+        content += '<td>To pipeline</td>';
         for(var i=0;i<ArrayOfPipelineElement.length;i++)
             content += '<td>Этап:'+(i+1)+"</td>";
 
-        content += '<td>Результат</td>';
-        // for(var i=0;i<ArrayOfPipelineElement[ArrayOfPipelineElement.length-1].history[ArrayOfPipelineElement[ArrayOfPipelineElement.length-1].history.length-1].time;i++)            content += '<td>Time:'+(i+1)+'</td>';
-        //     content += '<tr>Time:'+(i+1)+'</tr>';
+        content += '<td>Result</td>';
 
-        content +='</tr>';
-        var k=0;
-        for(var i=0;i<ArrayOfPipelineElement[ArrayOfPipelineElement.length-1].history[ArrayOfPipelineElement[ArrayOfPipelineElement.length-1].history.length-1].time;i++){
+        var count=0;
+        for(var i=-1;i<ArrayOfPipelineElement[ArrayOfPipelineElement.length-1].history[ArrayOfPipelineElement[ArrayOfPipelineElement.length-1].history.length-1].time;i++){
 
             content += '<tr>';
             content += '<td>Time:    '+(i+1)+'</td>';
-            content += '<td>ooo,ooo,ooo</td>';
+
+            content += '<td>';
+            if(ArrayOfPipelineElement[0].history[i+1] != undefined)
+                for(var j=0;j<ArrayOfPipelineElement[0].history[i+1].toPipeline.length;j++)
+                    content += "("+ArrayOfPipelineElement[0].history[i+1].toPipeline[j].num+","+ArrayOfPipelineElement[0].history[i+1].toPipeline[j].bitnum+")";
+            content += '</td>';
+
             for(var j=0;j<ArrayOfPipelineElement.length;j++){
                 content += '<td>';
                 for(var z=0;z<ArrayOfPipelineElement[j].history.length;z++)
@@ -61,10 +64,11 @@ $(document).ready(function(){
                 content += '</td>';
             }
             content += '<td>';
-            if(k<ArrayRezOfWork.length)
-                if(ArrayRezOfWork[k].time==i+1){
-                    k++;
-                    content +="ggg";
+            if(count<ArrayRezOfWork.length)
+                if(ArrayRezOfWork[count].time==i+1){
+                    for(var j=count;j>=0;j--)
+                        content +=ArrayRezOfWork[j].rez+" ";
+                    count++;
                 }
             else
                 content +="";
@@ -76,20 +80,10 @@ $(document).ready(function(){
         content += "</table>"
 
         $('#here_table').append(content);
-        // for(var j=0;j<ArrayOfPipelineElement.length;j++){
-        //     for(var z=0;z<ArrayOfPipelineElement[j].history.length;z++){
-        //         console.log(ArrayOfPipelineElement[j].history[z].wait);
-        //     }
-        //
-        //     console.log("-----");
-        // }
 
-
-        // $('#C').append("C:<Br>");
-        //
-        // for(var i=0;i<ArrayRezOfWork.length;i++)
-        //     $('#C').append(ArrayRezOfWork[i].rez+"|  time:"+ArrayRezOfWork[i].time+"<Br>");
-        // $('#C').append("-------------------");
+        $('tr').css({"border":"1px solid black"});
+        $('td').css({"border":"1px solid black"});
+        $('table').css({"border":"1px solid black"});
     });
 });
 function printCorrect(str) {

@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89839691-39c5-4ae8-9d84-ec1b442e6286" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/Pipeline.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd.js" afterPath="$PROJECT_DIR$/FrontEnd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pipeline.js" afterPath="$PROJECT_DIR$/Pipeline.js" />
     </list>
     <ignored path="MRZvIS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,14 +30,14 @@
       <file leaf-file-name="Pipeline.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pipeline.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2224">
-              <caret line="51" column="62" selection-start-line="51" selection-start-column="62" selection-end-line="51" selection-end-column="62" />
+            <state relative-caret-position="904">
+              <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc;n#PipelineObj#0" expanded="false" />
                 <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
                 <element signature="n#!!block;n#startPipeline#0" expanded="false" />
                 <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-                <element signature="e#1971#2075#0" expanded="false" />
+                <element signature="e#1634#1738#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -47,8 +46,8 @@
       <file leaf-file-name="FrontEnd.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FrontEnd.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="64" column="46" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
+            <state relative-caret-position="404">
+              <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
               <folding>
                 <element signature="e#0#38#0" expanded="false" />
                 <element signature="e#251#298#0" expanded="false" />
@@ -61,8 +60,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+            <state relative-caret-position="144">
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -245,6 +244,7 @@
       <workItem from="1487878454865" duration="6190000" />
       <workItem from="1487956105530" duration="15471000" />
       <workItem from="1487999511343" duration="11321000" />
+      <workItem from="1488729238673" duration="6355000" />
     </task>
     <task id="LOCAL-00001" summary="add pipeline time">
       <created>1487523284056</created>
@@ -264,7 +264,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83555000" />
+    <option name="totallyTimeSpent" value="89910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -329,6 +329,40 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Pipeline.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="51" column="62" selection-start-line="51" selection-start-column="62" selection-end-line="51" selection-end-column="62" />
+          <folding>
+            <element signature="n#!!doc;n#PipelineObj#0" expanded="false" />
+            <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
+            <element signature="n#!!block;n#startPipeline#0" expanded="false" />
+            <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+            <element signature="e#251#298#0" expanded="false" />
+            <element signature="e#332#403#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pipeline.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
@@ -336,7 +370,7 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -370,7 +404,7 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -404,7 +438,7 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -438,7 +472,7 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -472,7 +506,7 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -506,7 +540,7 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -540,7 +574,7 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -562,29 +596,7 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pipeline.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc;n#PipelineObj#0" expanded="false" />
-            <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
-            <element signature="n#!!block;n#startPipeline#0" expanded="false" />
-            <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -606,7 +618,29 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pipeline.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc;n#PipelineObj#0" expanded="false" />
+            <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
+            <element signature="n#!!block;n#startPipeline#0" expanded="false" />
+            <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -628,7 +662,7 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -650,7 +684,7 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -672,7 +706,7 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -694,7 +728,7 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -716,7 +750,7 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -738,7 +772,7 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -760,7 +794,7 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -782,7 +816,7 @@
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -797,30 +831,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        <state relative-caret-position="144">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pipeline.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2224">
-          <caret line="51" column="62" selection-start-line="51" selection-start-column="62" selection-end-line="51" selection-end-column="62" />
+        <state relative-caret-position="904">
+          <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#PipelineObj#0" expanded="false" />
             <element signature="n#!!block;n#startPipeline#0" expanded="false" />
             <element signature="n#!!block;n#addToPipeline#0" expanded="false" />
-            <element signature="e#1971#2075#0" expanded="false" />
+            <element signature="e#1634#1738#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="64" column="46" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
+        <state relative-caret-position="404">
+          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
           <folding>
             <element signature="e#0#38#0" expanded="false" />
             <element signature="e#251#298#0" expanded="false" />
