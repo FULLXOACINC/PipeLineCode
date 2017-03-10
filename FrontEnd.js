@@ -5,7 +5,6 @@ $(document).ready(function(){
 
     $('#start').click(function() {
         p=$('#p').val();
-        // maxElInPipeline=$('#r').val();
 
         var arrayOfTi = $('#Ti').val().toString().split(',').map(function (x) {
             return parseInt(x, 10);
@@ -33,7 +32,6 @@ $(document).ready(function(){
 
 
         startPipeline();
-        $('#here_table').empty();
         var content = "<table >"
         content += '<tr>';
 
@@ -45,13 +43,14 @@ $(document).ready(function(){
         content += '<td>Result</td>';
 
         var count=0;
+
         for(var i=-1;i<ArrayOfPipelineElement[ArrayOfPipelineElement.length-1].history[ArrayOfPipelineElement[ArrayOfPipelineElement.length-1].history.length-1].time;i++){
 
             content += '<tr>';
             content += '<td>Time:    '+(i+1)+'</td>';
 
             content += '<td>';
-            if(ArrayOfPipelineElement[0].history[i+1] != undefined)
+            if(ArrayOfPipelineElement[0].history[i+1] != undefined )
                 for(var j=0;j<ArrayOfPipelineElement[0].history[i+1].toPipeline.length;j++)
                     content += "("+ArrayOfPipelineElement[0].history[i+1].toPipeline[j].num+","+ArrayOfPipelineElement[0].history[i+1].toPipeline[j].bitnum+")";
             content += '</td>';
@@ -81,13 +80,24 @@ $(document).ready(function(){
 
         $('#here_table').append(content);
 
-        $('tr').css({"border":"1px solid black"});
-        $('td').css({"border":"1px solid black"});
-        $('table').css({"border":"1px solid black"});
+        $('td').css({"border":"3px solid black"});
+        $('table').css({"border":"2px solid black"});
     });
 });
 function printCorrect(str) {
-    for(var i =str.length;i<2*p;i++)
+    var res="";
+    for(var i =str.length;i<2*p;i++){
         str="0".concat(str);
-    return str
+    }
+    for(var i =0;i<str.length;i++){
+        if(i%4==0&&i!=0){
+            res=res.concat("-");
+        }
+        res=res.concat(str[i]);
+
+    }
+
+
+
+    return res
 }
